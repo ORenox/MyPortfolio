@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "tailwind-animations";
+
+@font-face {
+  font-family: "OnePiece";
+  src: url(".\assets\one piece font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-bg: #0b1120;          /* fondo principal */
+  --color-surface: #111827;     /* cards / bloques */
+  --color-primary: #38bdf8;     /* azul acento */
+  --color-secondary: #22c55e;   /* verde éxito */
+  --color-text: #e5e7eb;        /* texto principal */
+  --color-text-muted: #9ca3af;  /* texto secundario */
+  --color-border: #1f2937;      /* bordes sutiles */
+  --color-cardbg: #1e293b;    /* fondo de las cards */
+  --color-cardText: #ffffff;   /* texto de las cards */
+
+  --font-main: "Inter", sans-serif;
+  --font-title: "Poppins", sans-serif;
+  --font-carousel: "OnePiece", cursive;
+  --font-carousel2: "Delius", cursive;
+}
+
+
+:root[data-theme="light"] {
+  --color-bg: #f8fafc;          
+  --color-surface: #ffffff;     
+  --color-primary: #0ea5e9;     
+  --color-secondary: #16a34a;   
+  --color-text: #0f172a;        
+  --color-text-muted: #475569;  
+  --color-border: #e2e8f0;
+  --color-cardbg: #1e293b;
+  --color-cardText: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #0b1120;
+  --color-surface: #111827;
+  --color-primary: #38bdf8;
+  --color-secondary: #22c55e;
+  --color-text: #e5e7eb;
+  --color-text-muted: #9ca3af;
+  --color-border: #1f2937;
+  --color-cardbg: #1e293b;
+  --color-cardText: #0f172a;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-title);
+  }
+}
+
+@layer utilities {
+  .font-carousel {
+    font-family: var(--font-carousel);
+  }
+  .font-carousel2 {
+    font-family: var(--font-carousel2);
+  }
+}
