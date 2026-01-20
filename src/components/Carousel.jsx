@@ -45,7 +45,7 @@ export default function Carousel({
         `}
         style={{ transitionDuration: `${duration}ms` }}
       >
-        --O <span className="font-carousel2"> {phrases[index]} </span> O--
+        -- <span className="font-carousel2"> {phrases[index]} </span> --
       </p>
     </div>
   );
