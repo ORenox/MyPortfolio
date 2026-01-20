@@ -18,20 +18,23 @@ function App() {
 
 
       <section id="projects" className="min-h-screen pt-24">
-        <h2 className="text-4xl">Projects</h2>
-        <GitHubProjectsGrid />
+        <h2 className="text-4xl mb-12 text-text">Projects</h2>
+        <GitHubProjectsGrid/>
       </section>
 
       
 
-
+      {/*
       <section id="experience" className="min-h-screen pt-24">
-        <h2 className="text-4xl">Experience</h2>
+        <h2 className="text-4xl text-text">Experience</h2>
       </section>
 
       <section id="contact" className="min-h-screen pt-24">
-        <h2 className="text-4xl">Contact</h2>
+        <h2 className="text-4xl text-text">Contact</h2>
       </section>
+      
+      */}
+      
 
       <Footer />
     </>

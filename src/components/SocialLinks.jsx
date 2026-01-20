@@ -34,17 +34,17 @@ const socials = [
   {
     name: 'Youtube',
     icon: FaYoutube, 
-    url: "#" // Agrega tu URL real
+    url: "#" 
   },
   {
     name: 'LinkedIn',
     icon: FaLinkedin, 
-    url: "#" // Agrega tu URL real
+    url: "https://www.linkedin.com/in/renato-duchi/" 
   },
   {
     name: 'Instagram',
     icon: FaInstagram, 
-    url: "#" // Agrega tu URL real
+    url: "#" 
   }
 ]
 

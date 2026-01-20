@@ -5,15 +5,18 @@ const featuredProjects = {
   "SudokuSolver": {
     image: "./pictures/sudoku.png",
     featured: true,
+    
   },
   
   "UberFinanzas": {
     image: "./pictures/card1.png",
     featured: true,
+    lenguajes:["Kotlin", "GoogleApis"]
   },
   "JavaBasedCropManagement": {
     image: "./pictures/loginScreen.png",
     featured: true,
+    lenguajes:["Java", "MongoDB"]
   },
 };
 
@@ -37,7 +40,7 @@ export default function GitHubProjectsGrid() {
     <section className="max-w-6xl mx-auto">
       
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3  ">
         {repos.map((repo) => (
           <div
             key={repo.id}
@@ -50,16 +53,16 @@ export default function GitHubProjectsGrid() {
               className="h-40 w-full object-cover"
             />
 
-            <div className="p-5 flex flex-col flex-grow">
+            <div className="p-5 flex flex-col grow">
               <h3 className="text-xl text-primary font-semibold mb-2">{repo.name}</h3>
 
-              <p className="text-cardText text-sm flex-grow">
+              <p className="text-cardText text-sm grow">
                 {repo.description || "Sin descripción"}
               </p>
 
               <div className="mt-4 flex items-center justify-between">
                 <span className="text-xs bg-cardbg px-2 py-1 rounded">
-                  {repo.language || "N/A"}
+                  {featuredProjects[repo.name]?.lenguajes?.join(", ") || repo.language || "N/A"}
                 </span>
 
                 <a
